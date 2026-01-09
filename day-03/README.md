@@ -1,93 +1,107 @@
-# Day 03 – Strengthening Python Fundamentals for DevOps
+# Python For DevOps
 
-## Task
+This repository is part of the **Python For DevOps – [Live Weekend Batch](https://www.trainwithshubham.com/courses/Python-For-DevOps-AI-Edition-69241796652bda5433f1b0b7)**.
 
-Today’s goal is to **improve and refine your existing Python scripts** using better structure and basic error handling.
+It is designed to help beginners and DevOps aspirants learn how to use Python for real DevOps tasks such as automation, cloud operations, log analysis, and internal tooling.
 
-You will take **any one script** from:
-- Day 01 (System Health Script), or
-- Day 02 (API & JSON Script)
+The focus is not on Python syntax alone, but on thinking like a DevOps engineer using Python.
 
-And enhance it by:
-- Organizing the code into **functions**
-- Adding **basic exception handling** (`try / except`)
-- Improving variable names and readability
-- Ensuring the script does not crash on common errors
+---
 
-This task focuses on writing **cleaner and safer Python code**, which is critical for DevOps automation.
+## Objective
 
+By the end of this repository, learners should be confident enough to say:
 
-## Expected Output
+I can write Python scripts to solve DevOps problems.
 
-- One improved Python script
-- Script should:
-  - Run without crashing
-  - Handle at least one error gracefully
-- Output should be visible in terminal
+This repository emphasizes:
+- Practical automation use-cases
+- DevOps-oriented problem solving
+- Beginner-friendly explanations with real-world relevance
+
+---
+
+## Repository Structure
 
 
+``` bash
+python-for-devops/
+├── README.md
+├── requirements.txt
+├── day-01/   # LIVE
+├── day-02/   # LIVE
+├── day-03/   # PRACTICE
+├── day-04/   # PRACTICE
+├── day-05/   # PRACTICE
+├── day-06/   # PRACTICE
+├── day-07/   # PRACTICE
+├── day-08/   # LIVE
+├── day-09/   # LIVE
+├── day-10/   # PRACTICE + WRAP-UP
+├── projects/
+└── tests/
+```
+---
 
-## Guidelines
+## Tech Stack
 
-- Use:
-  - `try / except` for error handling
-  - Functions to separate logic
-- Example errors to handle:
-  - Invalid user input
-  - API request failure
-  - File not found
-- Follow basic Python coding standards (PEP8)
-- Do not rewrite everything from scratch
-- Focus on **improving existing code**
+- Python 3.13+
+- Linux system utilities
+- AWS Boto3, CDK
+- FastAPI
+- Requests
+- JSON
+- CLI tools (argparse)
+- GitHub
 
+---
 
+## Projects Included
 
-## Resources
+### Server Health Monitor
+- CPU, memory, disk checks
+- Status-based reporting
+- Beginner-friendly automation
 
-- Python exception handling:  
-  https://docs.python.org/3/tutorial/errors.html
+### Log Analyzer
+- Parse application logs
+- Count errors and warnings
+- Filter logs by keyword
 
-- PEP8 – Python Style Guide (must read):  
-  https://peps.python.org/pep-0008/
+### Capstone – Python for DevOps Automation
+- AWS automation using Python
+- Internal DevOps tool using FastAPI
+- CLI and API integration
+- Interview-ready project
 
-- Python Best Practices (read selectively):  
-  https://docs.python-guide.org/writing/style/
+---
 
-- Refactoring basics (from live class)
-- Your Day 01 / Day 02 scripts
+## Who This Repository Is For
 
+- Absolute beginners in Python
+- DevOps , SRE, Automation Engineers
+- Freshers and career switchers
+- Anyone who is looking to add Python automation skills
 
-## Why This Matters for DevOps
+---
 
-In real-world DevOps:
-- Scripts run in production
-- Failures are common (network, permissions, input errors)
-- Code is often read and modified by others
+## How to Use This Repository
 
-Following PEP8 and best practices makes your automation:
-- Easier to debug
-- Easier to maintain
-- Safer to run in production environments
+1. Fork the repository, sync-fork to get latest updates
+2. Create and activate a virtual environment
+3. Install dependencies using requirements.txt
+4. Follow the content day-wise
+5. Experiment, modify, and extend the scripts
+6. Push your assignments and improvements to GitHub
 
+---
 
-## Submission
+## Note
 
-1. Update your existing scripts from `day-01` and `day-02` and update it inside the `day-03` folder
-2. Ensure the script runs successfully
-3. Commit and push your changes to your fork
+This repository is meant for learning and confidence building.
+It focuses on fundamentals and real-world DevOps use-cases rather than production-grade systems.
 
+---
+Happy Learning
 
-## Learn in Public
-
-Share your progress on LinkedIn:
-- Post a small code snippet showing improved structure or error handling
-- Mention how you applied PEP8 or best practices
-- Write 2–3 lines on what you learned today
-
-Optional:
-- Tag **TrainWithShubham** or **Shubham Londhe**
-- Use hashtags: `#PythonForDevOps #TrainWithShubham #DevOpsKaJosh` (Helps me to filter post and Like/ Comment / Repost / engage)
-
-
-Happy Learning  
-[TrainWithShubham](https://www.trainwithshubham.com/)
+TrainWithShubham

@@ -23,37 +23,13 @@ from datetime import datetime  # Date and time handling
 
 
 def validate_api_key(api_key):
-    """
-    Validate that the API key is not empty or placeholder.
-    
-    This prevents common mistakes like forgetting to replace
-    the placeholder API key with a real one.
-    
-    Args:
-        api_key: The API key string to validate
-    
-    Returns:
-        bool: True if valid, False otherwise
-    """
+
     # Check if API key is missing or still set to placeholder value
     if not api_key or api_key == "YOUR_API_KEY":
         return False
     return True
 
-
 def validate_stock_symbol(symbol):
-    """
-    Validate stock symbol format (basic validation).
-    
-    Stock symbols are typically 1-5 uppercase letters (e.g., IBM, AAPL).
-    This function performs basic format checking.
-    
-    Args:
-        symbol: Stock ticker symbol
-    
-    Returns:
-        bool: True if valid format, False otherwise
-    """
     # Check if symbol exists and is a string
     if not symbol or not isinstance(symbol, str):
         return False
@@ -67,21 +43,6 @@ def validate_stock_symbol(symbol):
 
 
 def fetch_stock_data(api_url, api_key, symbol):
-    """
-    Fetch daily stock market data for a given symbol.
-    
-    Makes an HTTP GET request to Alpha Vantage API and retrieves
-    daily stock prices. Includes comprehensive error handling for
-    network issues, API errors, and malformed responses.
-    
-    Args:
-        api_url: The base URL of the Alpha Vantage API
-        api_key: Your personal API key for authentication
-        symbol: Stock ticker symbol (e.g., "IBM", "AAPL")
-    
-    Returns:
-        Dictionary containing stock data, or None if an error occurs
-    """
     try:
         # Build the query string with API parameters
         # function: Type of data to fetch (TIME_SERIES_DAILY)
@@ -150,21 +111,7 @@ def fetch_stock_data(api_url, api_key, symbol):
 
 
 def save_data_to_file(data, filename, symbol):
-    """
-    Save API data into a JSON file with metadata.
-    
-    Creates a JSON file with both the stock data and metadata
-    (fetch time, symbol, version). Automatically creates directories
-    if they don't exist.
-    
-    Args:
-        data: The stock data dictionary to save
-        filename: Name of the file to create
-        symbol: Stock symbol for metadata
-    
-    Returns:
-        bool: True if saved successfully, False otherwise
-    """
+
     try:
         # Create a structured output with metadata
         # This helps track when data was fetched and what version of script was used
@@ -217,20 +164,7 @@ def save_data_to_file(data, filename, symbol):
 
 
 def get_user_input(prompt, default=None, validator=None):
-    """
-    Get validated user input with optional default value.
-    
-    This function handles user input with validation, default values,
-    and proper error handling for interrupts and EOF.
-    
-    Args:
-        prompt: The prompt to display to user
-        default: Default value if user presses Enter
-        validator: Function to validate input (returns bool)
-    
-    Returns:
-        str: Validated user input
-    """
+
     # Loop until valid input is received
     while True:
         try:
