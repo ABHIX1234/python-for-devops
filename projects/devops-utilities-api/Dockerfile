@@ -1,17 +1,20 @@
-# Take Pateela
+#take base level for project
 
 FROM python:3.14
 
-# Add ingredients
+#add work direc= app
 
 WORKDIR /app
 
-COPY . .
-# mix / process the items
+copy . .
+
+#mix/ process the items
 
 RUN pip install -r requirements.txt
 
+#which port
 EXPOSE 8000
-# Gas on
+#start code
 
 CMD ["python","main.py"]
+
